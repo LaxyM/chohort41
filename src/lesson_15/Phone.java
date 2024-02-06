@@ -5,15 +5,15 @@ package lesson_15;
 делать фото, ставить будильник, играть музыку.
  */
 public class Phone {
-    String name;
-    int prise;
+    String model;
+    int price;
     double sizeScreen;
 
 
     // Конструктор
-    public Phone(String phoneName, int phonePrise, double phoneSize) {
-        name = phoneName;
-        prise = phonePrise;
+    public Phone(String phoneModel, int phonePrice, double phoneSize) {
+        model = phoneModel;
+        price = phonePrice;
         sizeScreen = phoneSize;
     }
 

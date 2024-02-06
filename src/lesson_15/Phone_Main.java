@@ -7,9 +7,9 @@ public class Phone_Main {
         Phone phone3 = new Phone("Xiaomi", 500, 6.0);
 
         // Выводим информацию о каждом телефоне
-        System.out.println("Марка телефона: " + phone1.name + ", Цена: " + phone1.prise + ", Размер экрана: " + phone1.sizeScreen);
-        System.out.println("Марка телефона: " + phone2.name + ", Цена: " + phone2.prise + ", Размер экрана: " + phone2.sizeScreen);
-        System.out.println("Марка телефона: " + phone3.name + ", Цена: " + phone3.prise + ", Размер экрана: " + phone3.sizeScreen);
+        System.out.println("Марка телефона: " + phone1.model + ", Цена: " + phone1.price + ", Размер экрана: " + phone1.sizeScreen);
+        System.out.println("Марка телефона: " + phone2.model + ", Цена: " + phone2.price + ", Размер экрана: " + phone2.sizeScreen);
+        System.out.println("Марка телефона: " + phone3.model + ", Цена: " + phone3.price + ", Размер экрана: " + phone3.sizeScreen);
 
 
         phone1.playMusic();
