@@ -34,13 +34,13 @@ public class RubberArrayMain {
             }
         }
 
-        // Проверка метода getValueAtIndex
+        // Проверка метода getValue
         int testIndex = 5;
         int valueAtIndex = ra.getValue(testIndex);
         System.out.println("Значение элемента с индексом " + testIndex + ": " + valueAtIndex);
 
 
-        // Проверка метода getCurrentSize
+        // Проверка метода getSize
         int currentSize = ra.getSize();
         System.out.println("Текущее количество элементов в массиве: "+currentSize);
 
