@@ -59,26 +59,26 @@ public class RubberArray {
 
     /// Метод ищет элемент в массиве и возвращает его индекс, если найден
     // и -1, если не найден
-    int searchInt(int target) {
+    public int searchInt(int target) {
         for (int i = 0; i < cursor; i++) {
             if (array[i] == target) {
                 return i;
             }
         }
-        return -1;
+        return Integer.MIN_VALUE; //TODO потом исправить
     }
 
     // Метод возвращает значение по указанному индексу
-    int getValue(int index) {
+   public int getValue(int index) {
         if (index >= 0 && index < cursor) {
             return array[index];
         } else {
-            return -1;
+            return Integer.MIN_VALUE;//TODO потом исправить
         }
     }
 
     // Метод возвращает текущее количество элементов в массиве
-    int getSize() {
+    public int getSize() {
         return cursor;
     }
 
