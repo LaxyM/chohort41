@@ -35,7 +35,7 @@ public class RubberArrayMain {
         }
 
         // Проверка метода getValue
-        int testIndex = 15;
+        int testIndex = 1;
         int valueAtIndex = ra.getValue(testIndex);
         System.out.println("Значение элемента с индексом " + testIndex + ": " + valueAtIndex);
 
