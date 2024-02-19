@@ -9,14 +9,22 @@ class ElectronicWallet implements PaymentSystem {
 
     @Override
     public void transferMoney(double amount) {
-        balance -= amount;
-        System.out.println(amount + " transferred from Electronic Wallet.");
+        if (amount <= balance) {
+            balance -= amount;
+            System.out.println(amount + " transferred from Electronic Wallet.");
+        } else {
+            System.out.println("Sorry you don't have money in your Electronic Wallet account.");
+        }
     }
 
     @Override
     public void withdrawMoney(double amount) {
-        balance -= amount;
-        System.out.println(amount + " withdrawn from Electronic Wallet.");
+        if (amount <= balance) {
+            balance -= amount;
+            System.out.println(amount + " withdrawn from Electronic Wallet.");
+        } else {
+            System.out.println("Sorry you don't have money in your Electronic Wallet account.");
+        }
     }
 
     @Override

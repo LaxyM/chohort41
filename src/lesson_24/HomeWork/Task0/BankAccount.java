@@ -9,14 +9,22 @@ class BankAccount implements PaymentSystem {
 
     @Override
     public void transferMoney(double amount) {
-        balance -= amount;
-        System.out.println(amount + " transferred from Bank Account.");
+        if (amount <= balance) {
+            balance -= amount;
+            System.out.println(amount + " transferred from Bank Account.");
+        } else {
+            System.out.println("Sorry you don't have money in your Bank account.");
+        }
     }
 
     @Override
     public void withdrawMoney(double amount) {
-        balance -= amount;
-        System.out.println(amount + " withdrawn from Bank Account.");
+        if (amount <= balance) {
+            balance -= amount;
+            System.out.println(amount + " withdrawn from Bank Account.");
+        } else {
+            System.out.println("Sorry you don't have money in your Bank account.");
+        }
     }
 
     @Override
