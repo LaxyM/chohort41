@@ -13,7 +13,7 @@ class ElectronicWallet implements PaymentSystem {
             balance -= amount;
             System.out.println(amount + " transferred from Electronic Wallet.");
         } else {
-            System.out.println("Sorry you don't have money in your Electronic Wallet account.");
+            System.out.println("Sorry you don't have enough money in your Electronic Wallet account.");
         }
     }
 
@@ -23,7 +23,7 @@ class ElectronicWallet implements PaymentSystem {
             balance -= amount;
             System.out.println(amount + " withdrawn from Electronic Wallet.");
         } else {
-            System.out.println("Sorry you don't have money in your Electronic Wallet account.");
+            System.out.println("Sorry you don't have enough money in your Electronic Wallet account.");
         }
     }
 

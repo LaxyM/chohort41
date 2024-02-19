@@ -13,7 +13,7 @@ class BankAccount implements PaymentSystem {
             balance -= amount;
             System.out.println(amount + " transferred from Bank Account.");
         } else {
-            System.out.println("Sorry you don't have money in your Bank account.");
+            System.out.println("Sorry you don't have enough money in your Bank account.");
         }
     }
 
@@ -23,7 +23,7 @@ class BankAccount implements PaymentSystem {
             balance -= amount;
             System.out.println(amount + " withdrawn from Bank Account.");
         } else {
-            System.out.println("Sorry you don't have money in your Bank account.");
+            System.out.println("Sorry you don't have enough money in your Bank account.");
         }
     }
 
