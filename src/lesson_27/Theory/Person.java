@@ -111,58 +111,25 @@ public class Person {
         if (password == null || password.isEmpty())
             return false;
 
+        boolean isLowerCase = false;
+        boolean isUpperCase = false;
+        boolean isDigit = false;
+        boolean isSpecial = false;
 
-        // Длина пароля больше или равна 8 символам
-        if (password.length() >= 7) {
-            return false;
-        }
-
-        // Должна быть мин одна маленькая буква
         for (int i = 0; i < password.length(); i++) {
             char c = password.charAt(i);
-            if (!Character.isLowerCase(c)) {
-                return false;
+            if (Character.isLowerCase(c)) {
+                isLowerCase = true;
+            } else if (Character.isUpperCase(c)) {
+                isUpperCase = true;
+            } else if (Character.isDigit(c)) {
+                isDigit = true;
+            } else if ("!%$@&*()[]".indexOf(c) != -1) {
+                isSpecial = true;
             }
         }
 
-        // Должна быть мин одна большая буква
-        for (int i = 0; i < password.length(); i++) {
-            char c = password.charAt(i);
-            if (!Character.isUpperCase(c)) {
-                return false;
-            }
-        }
-        // Должна быть мин одна цифра
-        for (int i = 0; i < password.length(); i++) {
-            char c = password.charAt(i);
-            if (!Character.isDigit(c)) {
-                return false;
-            }
-        }
-
-        // Должен быть мин спец символ ("!%$@&*()[]")
-        for (int i = 0; i < password.length(); i++) {
-            char c = password.charAt(i);
-
-            //true, если символ удовлетворяет хотя бы одному из критериев.
-            boolean isCharValid = (
-                    Character.isAlphabetic(c)
-                            || Character.isDigit(c)
-                            || c == '!'
-                            || c == '%'
-                            || c == '$'
-                            || c == '@'
-                            || c == '&'
-                            || c == '*'
-                            || c == '('
-                            || c == ')'
-                            || c == '['
-                            || c == ']');
-
-            if (!isCharValid) return false;
-
-        }
-        return true;
+        return isLowerCase && isUpperCase && isDigit && isSpecial;
     }
 
     @Override

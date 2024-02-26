@@ -2,7 +2,7 @@ package lesson_26.Theory;
 
 import java.util.Arrays;
 
-public class ArrayListApp {
+public class ArrayListMain {
     public static void main(String[] args) {
         MyArrayList<Integer> integerList = new MyArrayList<>();
 

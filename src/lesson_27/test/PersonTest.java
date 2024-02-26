@@ -1,11 +1,20 @@
 package lesson_27.test;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PersonTest {
+
+    @BeforeEach
+    private void setUp() {
+        System.out.println("Метод BeforeEach");
+    }
+
+
+
     @Test // указывает, что метод является тестовым
     public void testAddition() {
         int result = 2 + 2;
