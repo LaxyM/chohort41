@@ -204,8 +204,19 @@ public class MyLinkedList<T> implements MyList<T> {
     @SuppressWarnings("unchecked")
     public T[] toArray() {
 
-
+        if (first == null) {
+            // Если список пуст, создаем пустой массив. Необходим тип компонента, поэтому используем Object.
+            return (T[]) new Object[0];
+        }
+        // Создаем массив нужного размера и типа
         T[] result = (T[]) Array.newInstance(first.value.getClass(), size);
+
+        Node<T> cursor = first;
+        int index = 0;
+        while (cursor != null) {
+            result[index++] = cursor.value;
+            cursor = cursor.next;
+        }
 
         return result;
     }
