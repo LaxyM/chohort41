@@ -17,8 +17,7 @@ public class Task_1 {
     public static void main(String[] args) {
         Integer[] integers = {1, 6, 5, 4, 7, 8, 9, 2, 7, 3};
 
-
-        Comparator<Integer> comparator = new Comparator<Integer>() {
+        Arrays.sort(integers, new Comparator<Integer>() {
             @Override
             public int compare(Integer a, Integer b) {
                 if ((a % 2 == 0) && (b % 2 != 0)) {
@@ -29,10 +28,8 @@ public class Task_1 {
                     return a.compareTo(b);
                 }
             }
-        };
+        });
 
-        Arrays.sort(integers, comparator);
         System.out.println(Arrays.toString(integers));
-
     }
 }
