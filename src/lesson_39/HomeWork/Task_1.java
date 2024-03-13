@@ -13,6 +13,7 @@ public class Task_1 {
         Map<String, Integer> wordCounts = new HashMap<>();
 
         String[] words = text.split("\\W+");
+
         for (String word : words) {
             String lowerCaseWord = word.toLowerCase();
             // Если слово уже есть в словаре, увеличиваем его счетчик на 1
