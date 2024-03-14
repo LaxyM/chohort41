@@ -156,6 +156,13 @@ public class StreamExample {
                 .collect(Collectors.toList()); // преобразует элементы потока в список (в коллекцию)
 
         System.out.println(resultStream);
+//
+//        List<Integer> result = integers.stream()
+//                .filter(integer -> integer > 0)
+//                .filter(integer -> integer % 2 == 0)
+//                .collect(Collectors.toList());
+//
+//        System.out.println(result);
 
     }
 
